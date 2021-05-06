@@ -35,7 +35,14 @@ const account4 = {
   pin: 4444,
 };
 
-const accounts = [account1, account2, account3, account4];
+const account5 = {
+  owner: 'Devanshu Sharma',
+  movements: [800, 100, 1200, 70, 30, 45, 90],
+  interestRate: 1,
+  pin: 5555,
+};
+
+const accounts = [account1, account2, account3, account4, account5];
 
 // Elements
 const labelWelcome = document.querySelector('.welcome');
@@ -138,7 +145,7 @@ btnLogin.addEventListener('click', function (e) {
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     //display UI and welcome msg
-    labelWelcome.textContent = `Welcome back ${
+    labelWelcome.textContent = `Welcome Back ${
       currentAccount.owner.split(' ')[0]
     }`;
 
